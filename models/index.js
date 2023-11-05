@@ -1,9 +1,4 @@
-//const dbConfig = require('../config/db.config')
-/*
-const dotenv = require('dotenv');
-dotenv.config();
-console.log(process.env.PORT); 
-*/
+
 const mongoose = require("mongoose");
 
 let url = "mongodb+srv://AyeletSurvey:8p0V3bATrkUxorRD@ayelet-survey.ugyosfr.mongodb.net/";

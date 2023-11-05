@@ -4,14 +4,13 @@ const Survey = require("../models/survey");
 
 const createSurvey = async (req, res) => {
   let surveyDetails = req.body;
-  console.log("create survey",surveyDetails);
+  console.log("create survey", surveyDetails);
   const newSurvey = new Survey(surveyDetails)
   try {
     await newSurvey.save();
     res.status(200);
     res.send({ data: newSurvey, message: "Create New Survey" });
   }
-  
   catch (err) {
     console.log(err.message)
     return res.status(400).send(err.message)
@@ -37,7 +36,7 @@ function updateTask(req, res) {
   let { newTask } = req.body;
   newTask.deadline = new Date(`${newTask.deadline}Z`).toString();
   newTask.noticeDue = new Date(`${newTask.noticeDue}Z`).toString();
-  task.updateOne({ _id: newTask.id }, newTask).then(function (task) {//מונגו מחזיר לנוד את הטאסק החדש
+  task.updateOne({ _id: newTask.id }, newTask).then(function (task) {
     res.send(task);
   }).catch(function (ex) {
     res.send(ex);

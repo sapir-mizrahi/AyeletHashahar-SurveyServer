@@ -9,25 +9,17 @@ const userSchema = new mongoose.Schema({
     lastName: {
         type: String
     },
-    phoneNumber: {
-        type: String
-    },
+   
     email: {
         type: String
     },
     password: {
         type: String
     },
-    // status: {
-    //     type: String,
-    //     enum: ['active', 'inActive']
-    // },
-    height: {
-        type: String
-    },
-    weights: {
+    imgUrl:{
         type: String
     }
+    
 });
 const User = mongoose.model("User", userSchema);
 module.exports = User;

@@ -3,39 +3,25 @@ const surveySchema = new mongoose.Schema({
     id: {
         type: mongoose.SchemaTypes.String
     },
+    userId:{
+        type:String
+    },
     title: {
         type: String
     },
     subTitle: {
         type: String
     },
-    Identification: {
-        type: Boolean
+    surveyType: {
+        type: Boolean               
     },
-    surveyColor: {
-        type: String
+    surveyGroup: {
+        type: Array
     },
-    companyName: {
-        type: String
-    },
+    // surveyColor: {
+    //     type: String
+    // },
     questions: [Object]
-
 });
 const Survey = mongoose.model("Survey", surveySchema);
 module.exports = Survey;
-
-
-// const diaryByUserSchema = new mongoose.Schema({
-//     _id: {
-//         type: mongoose.SchemaTypes.String
-//     },
-//     userId: {
-//         type: String
-//     },
-//     diaryDays: [{
-//         date: Date,
-//         foods: [String]
-//     }]
-// });
-// const DiaryByUser = mongoose.model("DiaryByUser", diaryByUserSchema);
-// module.exports = DiaryByUser;
