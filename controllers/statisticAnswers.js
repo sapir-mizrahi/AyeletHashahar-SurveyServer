@@ -3,7 +3,6 @@ const express = require('express')
 
 const createSurveyAnswers = async (req, res) => {
   let surveyAnswersDetails = req.body;
-  console.log("surveyAnswersDetails", surveyAnswersDetails);
   const newSurveyAnswers = new StatisticAnswers(surveyAnswersDetails)
   try {
     await newSurveyAnswers.save();
