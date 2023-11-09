@@ -30,16 +30,4 @@ async function getSurveysByUserCreated(req, res) {
   }
 }
 
-
-// function updateTask(req, res) {
-//   let { newTask } = req.body;
-//   newTask.deadline = new Date(`${newTask.deadline}Z`).toString();
-//   newTask.noticeDue = new Date(`${newTask.noticeDue}Z`).toString();
-//   task.updateOne({ _id: newTask.id }, newTask).then(function (task) {
-//     res.send(task);
-//   }).catch(function (ex) {
-//     res.send(ex);
-//   })
-// }
-
 module.exports = { createSurveyAnswers, getSurveysByUserCreated }

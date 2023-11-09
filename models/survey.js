@@ -18,9 +18,7 @@ const surveySchema = new mongoose.Schema({
     surveyGroup: {
         type: Array
     },
-    // surveyColor: {
-    //     type: String
-    // },
+
     questions: [Object]
 });
 const Survey = mongoose.model("Survey", surveySchema);

@@ -2,7 +2,6 @@ const express = require('express')
 const cors = require("cors");
 const routeSurvey = require('./routers/survey')
 const routeUser = require('./routers/user')
-const routeContact = require('./routers/contact')
 const routeStatisticAnswers = require('./routers/statisticAnswers')
 const bodyParser = require('body-parser')
 
@@ -20,8 +19,6 @@ app.use(bodyParser.json())
 app.use('/survey', routeSurvey)
 app.use('/user', routeUser)
 app.use('/statistic', routeStatisticAnswers)
-// app.use('/message', routeContact)
-// app.use('/managerMessages', routeManagerMessages)
 
 app.listen(port, () => {
   console.log(`listening on port ${port}`)
